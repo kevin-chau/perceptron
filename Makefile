@@ -1,4 +1,4 @@
-all: perceptron nand
+all: perceptron nand add
 
 perceptron:
 	mkdir -p build
@@ -7,6 +7,10 @@ perceptron:
 nand:
 	mkdir -p build
 	gcc -o build/nand src/perceptronNAND.c
+
+add:
+	mkdir -p build
+	gcc -o build/add src/perceptronTwoBitAdd.c
 
 clean:
 	rm -rf build/
@@ -17,4 +21,7 @@ run_perceptron:
 run_nand:
 	./build/nand
 
-run: run_perceptron run_nand
+run_add:
+	./build/add
+
+run: run_perceptron run_nand run_add
