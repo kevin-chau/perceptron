@@ -12,6 +12,10 @@ add:
 	mkdir -p build
 	gcc -o build/add src/perceptronTwoBitAdd.c
 
+sigmoid:
+	mkdir -p build
+	gcc -o build/sigmoid src/sigmoid.c
+
 clean:
 	rm -rf build/
 
